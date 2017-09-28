@@ -16,6 +16,7 @@ class FavoritesController < ApplicationController
   end
 
   def show
+    @restaurant = Restaurant.new
     @favorite = Favorite.find(params[:id])
 
     render("favorites/show.html.erb")
