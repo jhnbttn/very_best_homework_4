@@ -19,7 +19,7 @@
       <tr>
         <td><%= dish.name %></td>
         <td><%= dish.cuisine.name %></td>
-        <td><%= dish.image %></td>
+        <td><img src='<%= dish.image %>' class='img-responsive'></td>
         <td>
           <a href="/dishes/<%= dish.id %>" class="btn btn-primary">Show</a>
           <a href="/dishes/<%= dish.id %>/edit" class="btn btn-warning">Edit</a>
