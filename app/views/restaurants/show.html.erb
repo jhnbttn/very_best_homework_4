@@ -9,7 +9,13 @@
       <dd><%= @restaurant.name %></dd>
 
       <dt>Neighborhood</dt>
-      <dd><%= @restaurant.neighborhood_id %></dd>
+      <dd>
+        <% if @restaurant.neighborhood.present? %>
+          <a href="/neighborhoods/<%= @restaurant.neighborhood_id %>">
+            <%= @restaurant.neighborhood.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Address</dt>
       <dd>
@@ -19,7 +25,13 @@
       </dd>
 
       <dt>Favorite</dt>
-      <dd><%= @restaurant.favorite_id %></dd>
+      <dd>
+        <% if @restaurant.favorite.present? %>
+          <a href="/favorites/<%= @restaurant.favorite_id %>">
+            <%= @restaurant.favorite.user_id %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
